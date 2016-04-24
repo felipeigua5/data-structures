@@ -9,7 +9,7 @@ public class List {
     private int data[];
     private int top;
     
-    public List(){
+    public List() {
         data = new int[100];
         top = 0;
     }
