@@ -7,13 +7,13 @@ import unity1.simpleStructures.Node;
 
 /**
  *
- * @author jonathan
+ * @author Felipe
  */
 public class List {
     private Node head;
     
     List(){
-        head = null;
+        head=null;
     }
     
     public void add(int d){
@@ -38,8 +38,7 @@ public class List {
         while(aux != null){
             count++;
             aux = aux.next;
-        }
-        
+        }       
         return count;
     }
     
@@ -59,8 +58,7 @@ public class List {
                 aux = aux.next;
             }
             int elem = aux.data;
-            System.out.println(elem);
-        
+            System.out.println(elem);        
     }
     
     
@@ -70,8 +68,7 @@ public class List {
         while(aux != null){
             System.out.print(" " + aux.data);
             aux = aux.next;
-        }
-        
+        }       
         System.out.println();
     }
     
@@ -90,7 +87,6 @@ public class List {
             p = aux;
             aux = aux.next;
         }
-
         if(aux != null){
             p.next = aux.next;
         }
@@ -129,8 +125,7 @@ public class List {
         Node last = head;
         Node aux = head;
         
-        while(last.next != null){
-            
+        while(last.next != null){           
             last = last.next;
             
         }
@@ -138,10 +133,8 @@ public class List {
         for(int i = 0; i<c; i++){
             last.next = new Node(aux.data);
             aux = aux.next;
-            last = last.next; 
-            
-        }
-       
+            last = last.next;            
+        }      
     }
     
     public void duplicateMirror(){
@@ -151,8 +144,7 @@ public class List {
         Node last = head;
         Node aux = head;
         
-        while(last.next != null){
-            
+        while(last.next != null){           
             last = last.next;
             
         }
@@ -161,8 +153,7 @@ public class List {
             Node n = new Node(aux.data);
             n.next = last.next;
             last.next = n;
-            aux = aux.next;
-            
+            aux = aux.next;           
         }
     }
     
@@ -176,8 +167,7 @@ public class List {
             while(aux.next != ok){
                 aux = aux.next;
             }
-            System.out.print("  " + aux.data);
-            
+            System.out.print("  " + aux.data);           
             ok = aux;
         } while (ok != head);
         System.out.println();
@@ -193,8 +183,7 @@ public class List {
             head = head.next;
             aux.next = head2;
             head2 = aux;
-        }
-        
+        }       
         head = head2;
     }
     
@@ -202,14 +191,12 @@ public class List {
     public void removeIntercalated(){
         if(head == null) return;
         
-
         Node aux = head;
         
         while(aux != null && aux.next != null){
              aux.next = aux.next.next;
              aux = aux.next;
-        }
-       
+        }     
     }
     
     public void DuplicateIntercalated(){
@@ -218,16 +205,13 @@ public class List {
         Node aux = head,p=head;
                                    
         while(aux != null){
-            
-            
+                       
             Node n = new Node(p.data);
             aux=aux.next;
              p.next=n;
              n.next=aux;
-             p=aux;
-          
-        }
-        
+             p=aux;         
+        }       
     }
     
     public void removeRecurrents(){
@@ -266,8 +250,7 @@ public class List {
             aux = aux.next;
             if(cont == c){
                 aux.next = aux.next.next;
-            }
-           
+            }           
         }
     }
     
@@ -280,9 +263,7 @@ public class List {
                 odds++;
             }
             aux = aux.next;
-
-        }
-        
+        }       
         return odds;
     }
     
@@ -301,7 +282,6 @@ public class List {
             p=aux;
           
         }
-    }
-    
+    }   
 }
     

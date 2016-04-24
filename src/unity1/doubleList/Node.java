@@ -7,7 +7,7 @@ package unity1.doubleList;
 
 /**
  *
- * @author jonathan
+ * @author Felipe
  */
 public class Node {
     protected int data;

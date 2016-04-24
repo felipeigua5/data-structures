@@ -15,8 +15,7 @@ public class Queue {
     
     public Queue(){
         data = new int[100];
-        top = 0;
-        
+        top = 0;       
     }
     
     public void add(int d) {

@@ -8,7 +8,7 @@ import java.awt.Toolkit;
 
 /**
  *
- * @author jonathan
+ * @author Felipe
  */
 public class Mine {
     protected int x,y;
@@ -29,19 +29,17 @@ public class Mine {
         Image image;
         
         if(state == false){
-            image = Toolkit.getDefaultToolkit().getImage("C:\\Users\\jonathan\\Downloads\\images\\mine.png");
+            image = Toolkit.getDefaultToolkit().getImage("C:\\Users\\Andres\\Downloads\\images\\mine.png");
         } else{
-            image = Toolkit.getDefaultToolkit().getImage("C:\\Users\\jonathan\\Downloads\\images\\boom.png");
-        }
-        
+            image = Toolkit.getDefaultToolkit().getImage("C:\\Users\\Andres\\Downloads\\images\\boom.png");
+        }       
         g.drawImage(image, x - 24, y - 24, z);
         
         if(current == true){
             g.setColor(Color.red);
         }else{
             g.setColor(Color.white);
-        }
-        
+        }       
         g.drawRect(x - 25, y - 25, 50, 50);
     }
 }

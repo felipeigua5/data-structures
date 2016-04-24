@@ -21,24 +21,20 @@ public class List {
             n.back = head.back;
             head.back.next = n;
             head.back = n;
-        }
-        
+        }      
     }
     
     public void moveFirstToEnd(){
         if (head == null) {
             return;
-        }
-        head = head.next;
+        } head = head.next;
     }
     
     public void moveLastToBeginning(){
         if (head == null) {
             return;
         }
-
-        head = head.back;
-        
+        head = head.back;       
     }
     
     public void print(){
@@ -64,8 +60,7 @@ public class List {
             
             for(int i=0;i<index;i++) {
                 aux = aux.next;
-            }
-            
+            }          
             aux.back.next = aux.next;
             aux.next.back = aux.back;
         }
@@ -76,13 +71,11 @@ public class List {
             return;
         }
         Node aux = head.back;
-
         do {
             aux = aux.back;
             aux.next = aux;    
                          
             aux = aux.back;
-        } while (aux != head.back);
-        
+        } while (aux != head.back);       
     }
 }

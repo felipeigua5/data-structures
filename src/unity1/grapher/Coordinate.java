@@ -9,8 +9,7 @@ package unity1.grapher;
  *
  * @author AULA1
  */
-public class Coordinate {
-    
+public class Coordinate {  
     protected int x,y;
     protected Coordinate next,back;
     
@@ -18,7 +17,5 @@ public class Coordinate {
         this.x = x;
         this.y = y;
         next = back = null;
-    }
-    
-    
+    }   
 }

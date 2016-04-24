@@ -7,7 +7,7 @@ package unity1.circularList;
 
 /**
  *
- * @author jonathan
+ * @author Felipe
  */
 public class Node {
     protected int data;

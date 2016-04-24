@@ -16,8 +16,6 @@ public class Test {
         l.add(12);
         l.remove(3);
         l.invert();
-        l.print();
-        
-        
+        l.print();       
     }
 }

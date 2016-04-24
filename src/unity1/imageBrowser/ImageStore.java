@@ -9,10 +9,9 @@ import javax.swing.ImageIcon;
 
 /**
  *
- * @author AULA1
+ * @author Felipe
  */
-public class ImageStore {
-    
+public class ImageStore {   
     protected ImageFile head, current;
     
     public ImageStore(){
@@ -24,24 +23,21 @@ public class ImageStore {
         ImageFile n = new ImageFile(name);
         if(head == null){
             head = n;
-        }
-        else{
+        }   else{
             ImageFile aux = head;
             while(aux.next != null){
                 aux = aux.next;
             }
             aux.next = n;
             n.back = aux;
-        }
-        current = n;
+        }   current = n;
     }
     
     public boolean goForward(){
         if(current.next != null){
             current = current.next;
             return true;
-        }
-        else{
+        }   else{
             return false;
         }   
     }
@@ -50,8 +46,7 @@ public class ImageStore {
         if(current.back != null){
             current = current.back;
             return true;
-        }
-        else{
+        } else{
             return false;
         }
     }
@@ -59,10 +54,8 @@ public class ImageStore {
     public ImageIcon getCurrent(){
         if(current == null){
             return new ImageIcon();
-        }
-        else{
+        } else{
             return new ImageIcon(current.name);   
-        }
-        
+        }       
     }
 }

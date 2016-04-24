@@ -3,7 +3,7 @@ package unity0;
 
 /**
  *
- * @author JONATHAN GOYES
+ * @author Felipe
  */
 public class Stack {
     private int  data[];
@@ -11,8 +11,7 @@ public class Stack {
     
     public Stack(){
         data = new int[100];
-        top = 0;
-        
+        top = 0;       
     }
     
     public void add(int d) {
@@ -22,8 +21,7 @@ public class Stack {
     
     public int remove(){
         top--;
-        return data[top];
-               
+        return data[top];              
     }
     
     public void print(){

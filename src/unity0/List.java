@@ -3,7 +3,7 @@ package unity0;
 
 /**
  *
- * @author jonathan goyes
+ * @author Felipe
  */
 public class List {
     private int data[];
@@ -14,13 +14,12 @@ public class List {
         top = 0;
     }
     
-    public void add(int d){ // add an element in the last position
+    public void add(int d){
         data[top] = d;
         top++;
     }
     
-    public void add (int d,int index){
-        
+    public void add (int d,int index){       
        top++;
        if(index<top){
             for(int i=top-1;i>=index;i--){
@@ -30,13 +29,12 @@ public class List {
        }
     }
     
-    public int remove(int d){ // remove any element into of the list
+    public int remove(int d){
         int i;
         for(i = 0; i < top; i++){
             if(data[i] == d){
                 top--;
-                break;
-                
+                break;                
             }
         }
         
@@ -48,8 +46,7 @@ public class List {
     
     public void print(){
         for(int i = 0; i < top ; i++){
-            System.out.print(" " + data[i]);
-            
+            System.out.print(" " + data[i]);            
         }
     }
 }

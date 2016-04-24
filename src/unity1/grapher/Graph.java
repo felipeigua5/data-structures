@@ -11,8 +11,7 @@ import javax.swing.JComponent;
 public class Graph extends JComponent {
     private Coordinate head;
     
-    public Graph() {
-        
+    public Graph() {       
     }
     
     public void addCoordinate(int x, int y) {

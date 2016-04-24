@@ -14,7 +14,7 @@ public class Node {
     protected Node next;
     
     public Node(int d){
-        data = d;
-        next = null;
+        data=d;
+        next=null;
     }
 }

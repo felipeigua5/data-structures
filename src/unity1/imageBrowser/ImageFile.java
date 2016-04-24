@@ -18,6 +18,5 @@ public class ImageFile {
         this.name = name;
         next = null;
         back = null;
-    }
-    
+    }   
 }

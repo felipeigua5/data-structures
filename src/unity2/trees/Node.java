@@ -3,7 +3,7 @@ package unity2.trees;
 
 /**
  *
- * @author jonathan
+ * @author Felipe
  */
 public class Node {
     
@@ -15,4 +15,4 @@ public class Node {
         data = d;
         left = right = null;
     }
-}
+} 

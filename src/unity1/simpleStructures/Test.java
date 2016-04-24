@@ -7,7 +7,7 @@ package unity1.simpleStructures;
 
 /**
  *
- * @author Jonathan goyes
+ * @author Felipe
  */
 public class Test {
     
@@ -20,8 +20,7 @@ public class Test {
         l.add(15);
         l.add(20);
         l.add(17);
-      
-        
+             
         System.out.print("Initial values: ");
         l.print();
         int c = l.count();//cantidad de nodos
@@ -59,12 +58,9 @@ public class Test {
         //l.InsertZeros();
         l.DuplicateIntercalated();
         l.print();
-        
-        
+               
     }
-    
-    
-    
+       
     public static void main (String [ ] args) {
         
         testingList();

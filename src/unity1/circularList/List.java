@@ -7,7 +7,7 @@ package unity1.circularList;
 
 /**
  *
- * @author jonathan
+ * @author Felipe
  */
 public class List {
     private Node head;
@@ -16,8 +16,7 @@ public class List {
         head = null;        
     }
     
-    public void add(int d){
-        
+    public void add(int d){       
         Node n = new Node(d);
         if (head == null) {
             head = n;
@@ -28,8 +27,7 @@ public class List {
             }
             n.next = head;
             aux.next = n;
-        }
-        
+        }       
     }
     
     public void print(){
@@ -39,10 +37,7 @@ public class List {
         do{
             System.out.println(" "+aux.data);
             aux = aux.next;
-        }
-        while(aux != head);
-        System.out.println("");
-        
-    }
-    
+        } while(aux != head);
+        System.out.println("");        
+    }   
 }

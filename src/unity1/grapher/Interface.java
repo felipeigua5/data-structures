@@ -41,16 +41,13 @@ public class Interface extends JFrame{
                 repaint();
             }
 
-            public void mouseMoved(MouseEvent e) {
-                
+            public void mouseMoved(MouseEvent e) {               
             }
         });
         this.addKeyListener(new KeyListener() {
 
-            public void keyTyped(KeyEvent e) {
-                
+            public void keyTyped(KeyEvent e) {               
             }
-
             
             public void keyPressed(KeyEvent e) {
                 if(e.getKeyCode() == KeyEvent.VK_BACK_SPACE) {
@@ -58,10 +55,8 @@ public class Interface extends JFrame{
                     repaint();
                 }
             }
-
             
-            public void keyReleased(KeyEvent e) {
-                
+            public void keyReleased(KeyEvent e) {                
             }
         });
     }

@@ -3,14 +3,14 @@ package unity1.doubleList;
 
 /**
  *
- * @author jonathan
+ * @author FELIPE
  */
 public class Test {
     
     public static void main (String [] args){        
         testingList();
     }
-    
+  
     public static void testingList(){
         List l = new List();
         l.add(4);

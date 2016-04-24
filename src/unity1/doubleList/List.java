@@ -3,7 +3,7 @@ package unity1.doubleList;
 
 /**
  *
- * @author jonathan
+ * @author Felipe
  */
 public class List {
     private Node head;
@@ -17,8 +17,7 @@ public class List {
         
         if (head == null) {
             head = n;
-        }
-        
+        }       
         else{
             Node aux = head;
             while(aux.next != null){
@@ -26,8 +25,7 @@ public class List {
             }
             aux.next = n;
             n.back = aux;
-        }
-        
+        }       
     }
     
     public int count(){
@@ -38,38 +36,31 @@ public class List {
         while(aux != null){
             count++;
             aux = aux.next;
-        }
-        
-        return count;
-        
+        }        
+        return count;       
     }
     
     public void printFirstElement(){
         
         if(head == null){
             System.out.println(-1);
-        }
-        else{
+        }else{
             System.out.println(head.data);
-        }
-        
+        }      
     }
     
      public void PrintLastElement(){
         
         if(head==null){
             System.out.println("-1");
-        }
-        
-        else{
-            
+        }       
+        else{           
            Node aux = head;
            while(aux.next!=null){
                aux=aux.next;
            }
             System.out.println(" " + aux.data);
-        }
-        
+        }       
     }
     
     public void print(){
@@ -113,12 +104,10 @@ public class List {
         
         if(index == 0){
             head = head.next;
-        }    
-        
+        }           
         for(int i=0;i<index;i++) {
             current = current.next;
-        }
-        
+        }       
         current.back.next = current.next;
         current.next.back = current.back;
 	
@@ -132,13 +121,11 @@ public class List {
         Node p = head;
         
         while(aux.next!=null){
-            aux=aux.next;
-            
+            aux=aux.next;           
             while(p.next!=aux){
                 p=p.next;
             }
-        }
-        
+        }        
         p.next=null;
         aux.back=p;
         

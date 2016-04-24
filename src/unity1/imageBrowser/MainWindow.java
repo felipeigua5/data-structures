@@ -38,34 +38,26 @@ public class MainWindow extends JFrame{
         viewer = new JButton();
         add(left, BorderLayout.WEST);
         add(right, BorderLayout.EAST);
-        add(viewer, BorderLayout.CENTER);
-        
+        add(viewer, BorderLayout.CENTER);       
     }
     
-    private void launchEvents(){
-        // when the window is opened
+    private void launchEvents(){ // when the window is opened
         File folder = new File("C:\\Users\\AULA1\\Downloads\\icons");
         for(File file: folder.listFiles()){
             images.add(file.getAbsolutePath());
         }
         viewer.setIcon(images.getCurrent());
         
-        // when left button is pressed
-        
         left.addActionListener(new ActionListener() {
-
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(images.goBack()){
                     viewer.setIcon(images.getCurrent());
                 }
-            }
-            
-        
+            }                 
         });
         
         right.addActionListener(new ActionListener() {
-
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(images.goForward()){
@@ -77,6 +69,5 @@ public class MainWindow extends JFrame{
     
     public static void main(String args[]){
         new MainWindow();
-    }
-    
+    }  
 }

@@ -3,7 +3,7 @@ package unity2.trees;
 
 /**
  *
- * @author jonathan
+ * @author Felipe
  */
 public class Tree {
     private Node root;
@@ -13,26 +13,25 @@ public class Tree {
     }
     
     public void add(int d) {
-        Node n = new Node(d);
-        if(root == null) {
-            root = n;
+        Node n=new Node(d);
+        if(root==null) {
+            root=n;
         } else {
-            Node aux = root, p = null;
-            while(aux != null) {
+            Node aux=root, p=null;
+            while(aux !=null) {
                 if(d < aux.data) {
-                    p = aux;
-                    aux = aux.left;
+                    p=aux;
+                    aux=aux.left;
                 } else if(d > aux.data) {
-                    p = aux;
-                    aux = aux.right;
+                    p=aux; aux = aux.right;
                 } else {
                     return;
                 }
             }
             if(d < p.data) {
-                p.left = n;
+                p.left =n;
             } else {
-                p.right = n;
+                p.right =n;
             }
         } 
     }

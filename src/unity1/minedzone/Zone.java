@@ -12,7 +12,7 @@ import javax.swing.JFrame;
 
 /**
  *
- * @author jonathan
+ * @author Felipe
  */
 public class Zone extends JFrame{
    
@@ -38,8 +38,7 @@ public class Zone extends JFrame{
            }
            aux.next = n;
            n.back = aux;
-       }
-       
+       }      
        current = n;
    }
    
@@ -64,10 +63,8 @@ public class Zone extends JFrame{
    public void paint(Graphics g){
        if( head == null ){
            return;
-       }
-       
-       Mine aux = head;
-       
+       }       
+       Mine aux = head;      
        while(aux != null){
            aux.paint(g, aux == current);
            aux = aux.next;
@@ -82,8 +79,7 @@ public class Zone extends JFrame{
        });
        
        addMouseListener(new MouseListener() {
-
-           
+          
            public void mouseClicked(MouseEvent e) {
                addMine(e.getX(), e.getY());
                repaint();
@@ -92,18 +88,15 @@ public class Zone extends JFrame{
            public void mousePressed(MouseEvent e) {
                
            }
-
-           
+         
            public void mouseReleased(MouseEvent e) {
            
            }
-
-           
+          
            public void mouseEntered(MouseEvent e) {
               
            }
-
-          
+         
            public void mouseExited(MouseEvent e) {
               
            }
@@ -111,20 +104,17 @@ public class Zone extends JFrame{
        
        addKeyListener(new KeyListener() {
 
-           public void keyTyped(KeyEvent e) {
-           
+           public void keyTyped(KeyEvent e) {          
            }
-
-          
-           public void keyPressed(KeyEvent e) {
+           
+                    public void keyPressed(KeyEvent e) {
                switch(e.getKeyCode()){
                    case KeyEvent.VK_RIGHT: goForward(); break;
                    case KeyEvent.VK_LEFT: goBack();    break;
                    case KeyEvent.VK_ENTER: explode(); break;
                }
            }
-
-           
+          
            public void keyReleased(KeyEvent e) {
                
            }

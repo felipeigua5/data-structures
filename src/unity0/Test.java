@@ -11,12 +11,10 @@ package unity0;
  */
 public class Test {
     
-    public static void main (String [ ] args) {
-        
+    public static void main (String [ ] args) {       
         testingList();
         testingStacks();
-        testingQueues();
-        
+        testingQueues();       
     }
     
     public static void testingList(){
@@ -62,8 +60,7 @@ public class Test {
         
         for(int i = 2; i < 20 ; i+=2){
             s.add(i);
-        }
-        
+        }       
         s.print();
     }
 }
