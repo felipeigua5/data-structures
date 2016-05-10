@@ -11,37 +11,41 @@ package unity2.trees;
  */
 public class Test {
     
-    public static void main (String args[]){ 
-    tree t = new tree();
-    int values[]= {8,4,16,2,6,12,20,1,10,14,13,15 };
-    for (int i=0; i<values.length; i++){
-    t.add(values[1]);
-}
-    int v=13;
-    System.out.print("Path to"+ v + ":");
-    t.printpath(v);
-    
-    if(t.isLeaf(v)){
-        System.out.println("");
-    }else{
-    System.out.print("");   
-}
-    System.out.print("print tree");
-    t.print();
-    System.out.print("");
-    
-    t.Max();
-    t.Min();
-   // t.Printleafs();
-    t.Count();
-    System.out.println("recursive print");
-    t.recursivePrint();
-    
-    t.recursivePrint();
-    System.out.println("recursive count");
-    int r = t.recursiveCount();
-    System.out.println("total node"+ r);
-    
-    }  
-    
+  public static void main(String args[]){
+        Tree t = new Tree();
+        int values[]={8,4,16,2,6,12,20,1,10,14,13,15};
+        for (int i = 0; i < values.length ; i++) {
+            t.add(values[i]);
+        }
+        int v = 15;
+        System.out.println("Path to "+v+":");
+        t.printPath(v);        
+        //---------------------------
+        if(t.isleaf(v)) {
+            System.out.println(" "+v+" is a leaf");
+        } else {
+            System.out.println(" "+v+" doesn't a leaf");
+        }
+        int c = t.count();
+        System.out.println("Total nodes: "+c);  
+            
+        System.out.println("Max: "+t.max());
+        
+        System.out.println("Min: "+t.min());  
+        
+        System.out.print("recursivePrint: ");
+        t.recursivePrint();
+        
+        int r = t.recursiveCount();
+        System.out.println("RecursiveCount: "+r);
+        
+        System.out.println("The height of tree is: " + t.height());
+        
+        System.out.println("The leafs are: ");
+        t.printLeafsR();
+        t.rDraw();
+    }
+  
+  
+  
 }
