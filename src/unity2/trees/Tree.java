@@ -118,6 +118,8 @@ public class Tree {
         return cont;
     }
     
+    
+    
     public void printLeafs(){
         Node aux = root;
         Stack <Node> s = new Stack <Node> ();
@@ -338,6 +340,82 @@ public class Tree {
     }
     
     
+    
+    
+    public int countOdds() {
+      return CountOdds(root);
+  } 
+  private int CountOdds(Node r){
+     
+      if(r==null) return 0;
+        int cont = 0;
+      if(r.data%2==1){
+          cont ++ ; 
+      }
+      
+      CountOdds(r.right);
+      CountOdds(r.left);
+      return cont + 1;    
+  
+}
+  
+  
+  
+  public void PrintSonAlone(){
+      PrintSonAlone(root);
+  }
+  private void PrintSonAlone(Node r){
+      
+      if(r==null) return;
+      
+      PrintSonAlone(r.left);
+      PrintSonAlone(r.right);
+      
+      if(r.left==null && r.right != null ){
+          System.out.println(""+r.right.data);
+      }else if (r.left!=null && r.right==null){
+          System.out.println(""+r.left.data);
+      }
+  }
+  
+  
+  
+  
+   public void reversePrint (){
+
+        Node aux = root;
+        Stack<Node> stack = new Stack<>();
+
+        while (aux != null) {
+            stack.push(aux); //apila nodo
+
+            aux = aux.right;
+        }
+        while (!stack.empty()) { // mientras la pila no este vacia.
+            aux = stack.pop(); // desapila un nodo pero devuelve su direccion
+            System.out.print(" " + aux.value); //lo imprime
+            aux = aux.left; // pasa a buscar en el lado derecho
+            while (aux != null) {
+                stack.push(aux); //apila un nodo
+                aux = aux.right;
+            }
+        }
+        System.out.println();
+
+   }
+    
+   
+  
+  private void reversePrint(Node r){
+      
+      if(r==null) return;
+      
+      reversePrint(r.right);
+      System.out.println(""+r.data);
+      reversePrint(r.left);
+  }
+  
+  
  
     
 }

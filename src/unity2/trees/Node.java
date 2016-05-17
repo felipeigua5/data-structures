@@ -10,6 +10,7 @@ public class Node {
     protected int data;
     protected Node left;
     protected Node right;
+    String value;
     
     public Node(int d) {
         data = d;
